@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 3,
-    price: 20,
+    price: "20",
     category: "sefa",
     imgScr: SefaImg,
     title: "Sefa",

@@ -12,7 +12,7 @@ import { paddingBot, paddingTop } from "@/utils/props";
 const products = [
   {
     id: 1,
-    price: 38,
+    price: "38",
     category: "ramen",
     imgScr: Ramen1,
     title: "Shoyu Ramen",
@@ -20,7 +20,7 @@ const products = [
   },
   {
     id: 2,
-    price: 42,
+    price: "42",
     category: "ramen",
     imgScr: Ramen1,
     title: "Tonkotsu  ramen",
@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 3,
-    price: 44,
+    price: "44",
     category: "ramen",
     imgScr: Ramen2,
     title: "Miso Ramen",
@@ -38,7 +38,7 @@ const products = [
   },
   {
     id: 4,
-    price: 48,
+    price: "48",
     category: "ramen",
     imgScr: Ramen2,
     title: "Spicy Seafood Ramen",
