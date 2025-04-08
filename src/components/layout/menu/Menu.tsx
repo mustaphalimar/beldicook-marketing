@@ -5,6 +5,7 @@ import { paddingBot, paddingTop } from "@/utils/props";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import useMenuTabsStore from "../../../stores/useMenuTabsStore";
+import Image from "next/image";
 
 const menu = {
   poulet_au_daghmira: [
@@ -14,6 +15,8 @@ const menu = {
       price: "40 DHS",
       category: "poulet_au_daghmira",
       description: "",
+      arabTitle: "دجاجة 1/4",
+      arabDescription: "",
     },
     {
       id: 2,
@@ -21,6 +24,8 @@ const menu = {
       price: "75 DHS",
       category: "poulet_au_daghmira",
       description: "",
+      arabTitle: "دجاجة 1/2",
+      arabDescription: "",
     },
     {
       id: 3,
@@ -28,6 +33,8 @@ const menu = {
       price: "140 DHS",
       category: "poulet_au_daghmira",
       description: "",
+      arabTitle: "دجاجة كاملة",
+      arabDescription: "",
     },
   ],
   pastilla: [
@@ -37,6 +44,8 @@ const menu = {
       price: "42 DHS",
       category: "pastilla",
       description: "",
+      arabTitle: "بسطيلة دجاج",
+      arabDescription: "",
     },
     {
       id: 2,
@@ -44,6 +53,8 @@ const menu = {
       title: "Pastilla au Poisson - Fish Pastilla",
       category: "pastilla",
       description: "",
+      arabTitle: "بسطيلة سمك",
+      arabDescription: "",
     },
   ],
   sefa: [
@@ -53,6 +64,8 @@ const menu = {
       price: "20 DHS",
       category: "sefa",
       description: "",
+      arabTitle: "سفة",
+      arabDescription: "",
     },
   ],
   cigare: [
@@ -62,6 +75,8 @@ const menu = {
       price: "15 DHS",
       category: "cigare",
       description: "",
+      arabTitle: "سيجار دجاج",
+      arabDescription: "",
     },
     {
       id: 2,
@@ -69,6 +84,8 @@ const menu = {
       price: "17 DHS",
       category: "cigare",
       description: "",
+      arabTitle: "سيجار سمك",
+      arabDescription: "",
     },
   ],
   briouate: [
@@ -78,6 +95,8 @@ const menu = {
       price: "13 DHS",
       category: "briouate",
       description: "Grand",
+      arabTitle: "بريوات بالدجاج",
+      arabDescription: "كبيرة",
     },
     {
       id: 2,
@@ -85,6 +104,8 @@ const menu = {
       price: "15 DHS",
       category: "briouate",
       description: "Grand",
+      arabTitle: "بريوات بالسمك",
+      arabDescription: "كبيرة",
     },
     {
       id: 3,
@@ -92,6 +113,8 @@ const menu = {
       price: "08 DHS",
       category: "briouate",
       description: "Mini",
+      arabTitle: "بريوات بالكفتة",
+      arabDescription: "صغيرة",
     },
     {
       id: 4,
@@ -99,6 +122,8 @@ const menu = {
       price: "07 DHS",
       category: "briouate",
       description: "Mini",
+      arabTitle: "بريوات بالجبن",
+      arabDescription: "صغيرة",
     },
     {
       id: 5,
@@ -106,6 +131,8 @@ const menu = {
       price: "06 DHS",
       category: "briouate",
       description: "Mini",
+      arabTitle: "بسطيلة بالخضر",
+      arabDescription: "صغيرة",
     },
   ],
   boissons: [
@@ -115,6 +142,8 @@ const menu = {
       price: "12 DHS",
       category: "boissons",
       description: "BETTERAVE, CAROTTE, ORANGE, CONCOMBRE, CITRON",
+      arabTitle: "عصير طبيعي",
+      arabDescription: "باربا - جزر - برتقال - خيار - الحامض",
     },
     {
       id: 2,
@@ -122,6 +151,8 @@ const menu = {
       price: "08 DHS",
       category: "boissons",
       description: "Grand",
+      arabTitle: "مشروبات غازية",
+      arabDescription: "",
     },
     {
       id: 3,
@@ -129,6 +160,8 @@ const menu = {
       price: "07 DHS",
       category: "boissons",
       description: "Mini",
+      arabTitle: "ماء 50 سل",
+      arabDescription: "",
     },
     {
       id: 4,
@@ -136,6 +169,8 @@ const menu = {
       price: "04 DHS",
       category: "boissons",
       description: "Mini",
+      arabTitle: "ماء 30 سل",
+      arabDescription: "",
     },
   ],
   soupe_marocaine: [
@@ -145,6 +180,8 @@ const menu = {
       price: "13 DHS",
       category: "soupe_marocaine",
       description: "Datte - Oeuf - Chebakia",
+      arabTitle: "حريرة",
+      arabDescription: "تمر - بيض - شباكية",
     },
   ],
 };
@@ -168,7 +205,16 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
     >
       <div id="menu" className="absolute -top-20"></div>
       <div className="container container--xs">
-        <div className="mx-auto">
+        <div className="mx-auto flex items-center justify-center gap-4">
+          <div className="w-[150px] h-[150px] flex flex-col items-center justify-center overflow-hidden rounded-full">
+            <Image
+              src="/images/menu.png"
+              width={200}
+              height={200}
+              className="object-cover rounded-full border border-black scale-125"
+              alt="menu"
+            />
+          </div>
           <h2 className="relative mb-4 text-4xl font-bold text-center font-brush text-neutral-900">
             <span className="relative z-10">Notre Menu</span>
           </h2>
@@ -177,68 +223,96 @@ export default function Menu({ pb = "md", pt = "md" }: Props) {
         <TabsProduct tab={tab} setTab={setTab} />
 
         {tab == 0 &&
-          menu.poulet_au_daghmira?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.poulet_au_daghmira?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 1 &&
-          menu.pastilla?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.pastilla?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 2 &&
-          menu.sefa?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.sefa?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 3 &&
-          menu.cigare?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.cigare?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 4 &&
-          menu.briouate?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.briouate?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 5 &&
-          menu.boissons?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.boissons?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
         {tab == 6 &&
-          menu.soupe_marocaine?.map(({ id, price, title, description }) => (
-            <MenuItem
-              key={id}
-              title={title}
-              description={description}
-              price={price}
-            />
-          ))}
+          menu.soupe_marocaine?.map(
+            ({ id, price, title, description, arabTitle, arabDescription }) => (
+              <MenuItem
+                key={id}
+                title={title}
+                description={description}
+                price={price}
+                arabTitle={arabTitle}
+                arabDescription={arabDescription}
+              />
+            )
+          )}
       </div>
     </section>
   );

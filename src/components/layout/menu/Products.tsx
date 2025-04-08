@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Product from "../../modules/Product/Product";
-import Ramen1 from "@/public/products/ramen/ramen-shoyu.avif";
-import Ramen2 from "@/public/products/ramen/ramen-miso.avif";
+import PastillaImg from "@/public/food/pastilla-2.jpg";
+import BriouateImg from "@/public/food/briouate-1.jpg";
+import SefaImg from "@/public/food/sefa.jpg";
+import CigareImg from "@/public/food/cigare.jpg";
 import ScrollAnimated from "../ScrollAnimated";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -15,37 +17,35 @@ import clsx from "clsx";
 const products = [
   {
     id: 1,
-    price: 38,
-    category: "ramen",
-    imgScr: Ramen1,
-    title: "Shoyu Ramen",
-    description: "Soy sauce-based broth, chicken, nori, menma, scallions",
+    price: "42",
+    category: "pastilla",
+    imgScr: PastillaImg,
+    title: "Pastilla",
+    description: "Poulet/Poisson - Chicken/Fish",
   },
   {
     id: 2,
-    price: 42,
-    category: "ramen",
-    imgScr: Ramen1,
-    title: "Tonkotsu  ramen",
-    description:
-      "Rich pork broth, pork belly, soft-boiled egg, bamboo shoots, green onions",
+    price: "06 - 15",
+    category: "briouate",
+    imgScr: BriouateImg,
+    title: "Briouate",
+    description: "Poulet/Poisson - Chicken/Fish, viande hachée - minced meat",
   },
   {
     id: 3,
-    price: 44,
-    category: "ramen",
-    imgScr: Ramen2,
-    title: "Miso Ramen",
-    description:
-      "Miso-based broth, ground pork, corn, butter, bean sprouts, chives",
+    price: 20,
+    category: "sefa",
+    imgScr: SefaImg,
+    title: "Sefa",
+    description: "",
   },
   {
     id: 4,
-    price: 48,
-    category: "ramen",
-    imgScr: Ramen2,
-    title: "Spicy Seafood Ramen",
-    description: "Spicy broth, mixed seafood, mushrooms, bok choy, red ginger",
+    price: "15 - 17",
+    category: "cigare",
+    imgScr: CigareImg,
+    title: "Cigare",
+    description: "Poulet/Poisson - Chicken/Fish",
   },
 ];
 

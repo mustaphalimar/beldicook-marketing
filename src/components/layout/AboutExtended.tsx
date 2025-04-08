@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Image2 from "@/public/bento/bento-2.jpg";
-import Image6 from "@/public/bento/bento-6.jpg";
+import Image2 from "@/public/food/pastilla.jpg";
+import Image6 from "@/public/food/sefa-2.jpg";
 
 export default function AboutExtended() {
   return (
@@ -19,48 +19,52 @@ export default function AboutExtended() {
 
             <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
               <h2 className="mb-4 heading-second text-neutral-900">
-                Our
+                Notre
                 <br />
-                History
+                Histoire
               </h2>
               <div className="space-y-4 text-neutral-600 ">
                 <p>
-                  Over ten years ago, our journey began with a simple yet
-                  profound ambition: to craft a haven for lovers of Japanese
-                  cuisine. It was from this passion and dedication that our
-                  restaurant was born, quickly growing from a dream into a
-                  beloved destination for those seeking a genuine taste of
-                  Japan.
+                  Notre aventure est née d&apos;une ambition simple mais
+                  profonde : créer un lieu dédié aux amoureux de la cuisine
+                  marocaine beldi. C&apos;est de cette passion et de cette
+                  volonté qu&apos;est né Beldi Cook, devenu au fil du temps une
+                  destination prisée pour celles et ceux en quête de saveurs
+                  marocaines authentiques.
                 </p>
 
                 <p>
-                  Over the years, Asian Food has grown from a small, family-run
-                  eatery into a cornerstone of the community. Each dish we serve
-                  carries the legacy of our humble beginnings - crafted with
-                  care, seasoned with history, and served with a warm smile.
+                  Au fil du temps, Beldi Cook est passé d&apos;un petit
+                  établissement familial à une véritable référence au sein de la
+                  communauté. Chaque plat que nous servons porte l&apos;héritage
+                  de nos débuts modestes — préparé avec soin, imprégné
+                  d&apos;histoire et toujours accompagné d&apos;un sourire
+                  chaleureux.
                 </p>
               </div>
             </div>
 
             <div className="p-8 bg-white lg:p-16 rounded-custom--lg">
               <h2 className="mb-4 heading-second text-neutral-900">
-                About us
+                À propos de nous
               </h2>
               <div className="space-y-4 text-neutral-600">
                 <p>
-                  Our chefs, masters of their craft, meticulously blend
-                  traditional techniques with modern flair to bring you a menu
-                  that&apos;s both authentic and innovative. From the vibrant colors
-                  of our sushi to the aromatic broths of our ramen, each
-                  ingredient is handpicked, each recipe is time-honored, and
-                  each meal is a testament to the spirit of Japanese cuisine.
+                  Nos chefs, véritables maîtres dans leur art, marient avec
+                  précision les techniques traditionnelles à une touche de
+                  modernité pour vous offrir une carte à la fois authentique et
+                  inventive. Des couleurs envoûtantes de nos pastillas aux
+                  arômes délicats de nos soupes beldi, chaque ingrédient est
+                  soigneusement sélectionné, chaque recette est héritée du
+                  temps, et chaque plat rend hommage à l&apos;âme de la cuisine
+                  marocaine.
                 </p>
                 <p>
-                  We invite you to step into our world, to explore the richness
-                  of Japanese culture, and to savor a culinary adventure that&apos;s
-                  been a decade in the making. Welcome to Asian Food,
-                  where every meal is a journey, and every journey is a story
-                  waiting to be told.
+                  Nous vous invitons à entrer dans notre univers, à découvrir la
+                  richesse de la culture marocaine et à savourer une aventure
+                  culinaire empreinte de tradition et de passion. Bienvenue chez
+                  Beldi Cook, où chaque repas est un voyage, et chaque voyage
+                  une histoire qui ne demande qu&apos;à être racontée.
                 </p>
               </div>
             </div>

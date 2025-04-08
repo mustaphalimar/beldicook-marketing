@@ -8,8 +8,8 @@ export default function AboutPage() {
   return (
     <PageWrapper className="bg-light-ivory">
       <AboutExtended />
-      <Team />
-      <Testimonials />
+      {/* <Team /> */}
+      {/* <Testimonials /> */}
       <Footer />
     </PageWrapper>
   );

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import LogoSVG from "../svg/LogoSVG";
+import Image from "next/image";
 
 const links = [
   { id: 0, title: "Home", path: "/" },
@@ -18,10 +19,17 @@ export default function Footer() {
             href="/"
             className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
           >
-            <LogoSVG width={50} height={50} />
+            <div className="bg-white w-[50px] h-[50px] rounded-full my-2">
+              <Image
+                src="/logos/beldi_cook_blue.png"
+                width={50}
+                height={50}
+                alt="beldi_cook_blue"
+              />
+            </div>
             <span className="flex gap-1">
-              <span className="text-white font-brush">Asian</span>
-              <span className="text-primary-500 font-brush">Food</span>
+              <span className="text-white font-brush">Beldi</span>
+              <span className="text-primary-500 font-brush">Cook</span>
             </span>
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-neutral-900 dark:text-white">

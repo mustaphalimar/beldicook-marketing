@@ -110,21 +110,18 @@ export default function Contact() {
               </div>
             </section>
           </div>
-
-          {!isMobile && (
-            <div className="mt-8 lg:w-1/2 lg:mx-6">
-              <iframe
-                className="w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.2050661899516!2d-9.553576799999999!3d30.402637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI0JzA5LjUiTiA5wrAzMycwMS40Ilc!5e0!3m2!1sen!2sus!4v1712613699785!5m2!1sen!2sus"
-                width="800"
-                height="600"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          )}
+          <div className="mt-8 lg:w-1/2 lg:mx-6">
+            <iframe
+              className="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.2050661899516!2d-9.553576799999999!3d30.402637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI0JzA5LjUiTiA5wrAzMycwMS40Ilc!5e0!3m2!1sen!2sus!4v1712613699785!5m2!1sen!2sus"
+              width="800"
+              height="600"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </ScrollAnimated>
     </section>

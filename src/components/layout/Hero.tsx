@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "@/components/ui/Button";
-import bg from "@/public/hero-bg.avif";
+import bg from "@/public/food/pastilla.jpg";
+import bg2 from "@/public/food/pastilla-2.jpg";
 import Link from "next/link";
 import LogoSVG from "../svg/LogoSVG";
 import Image from "next/image";
@@ -63,9 +64,7 @@ export default function Hero() {
         {(isMobile || isMobile === undefined) && (
           <Image
             className="absolute top-0 left-0 object-cover object-left w-full transition z-1"
-            src={
-              "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
+            src={bg2}
             fill
             onLoad={() => setLoaded(true)}
             priority
@@ -84,7 +83,15 @@ export default function Hero() {
                 duration={0.8}
                 variant={"top-sm"}
               >
-                <LogoSVG width={150} height={150} />
+                {/* <LogoSVG width={150} height={150} /> */}
+                <div className="bg-white w-[120px] h-[120px] rounded-full my-2">
+                  <Image
+                    src="/logos/beldi_cook_blue.png"
+                    width={120}
+                    height={120}
+                    alt="beldi_cook_blue"
+                  />
+                </div>
               </Animated>
               <Animated
                 as="h1"

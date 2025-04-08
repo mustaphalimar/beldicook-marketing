@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Image1 from "@/public/about/about-1.avif";
-import Image2 from "@/public/about/about-2.jpg";
+import Image1 from "@/public/food/rfissa-rapide-poulet.jpg";
+import Image2 from "@/public/food/pastilla-horizontal.jpg";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import ScrollAnimated from "./ScrollAnimated";
@@ -49,9 +49,7 @@ export default function About() {
                   className="relative z-10 object-cover w-full h-full rounded-custom"
                   width={284}
                   height={434}
-                  src={
-                    "https://images.unsplash.com/photo-1564632302631-c3670e71f579?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  }
+                  src={Image1}
                   alt="Chef working on a dish"
                 />
               </div>
@@ -60,9 +58,7 @@ export default function About() {
                   className="relative z-10 object-cover w-full h-full rounded-custom"
                   width={284}
                   height={434}
-                  src={
-                    "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  }
+                  src={Image2}
                   alt=""
                 />
               </div>

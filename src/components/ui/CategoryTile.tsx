@@ -37,7 +37,7 @@ export default function CategoryTile({
         <span className="absolute top-0 left-0 z-10 w-full h-full transition duration-500 opacity-0 bg-gradient-to-r from-black group-hover:opacity-50"></span>
       </Link>
       <span className="absolute z-10 flex items-center gap-1 transition duration-300 translate-y-24 bottom-10 md:bottom-14 ease group-hover:translate-y-0 left-4 md:left-8">
-        <span className="z-30 text-xl md:text-4xl">{title}</span>
+        <span className="z-30 text-xl font-semibold md:text-4xl">{title}</span>
       </span>
       <span className="absolute z-10 flex items-center gap-1 transition duration-300 delay-75 translate-y-14 bottom-4 md:bottom-6 ease group-hover:translate-y-0 left-4 md:left-8">
         <Link
@@ -63,7 +63,7 @@ export default function CategoryTile({
         </Link>
       </span>
       <Image
-        className="w-full h-full transition duration-500 group-hover:scale-110"
+        className={`w-full h-full object-cover transition duration-500 group-hover:scale-110`}
         width={width}
         height={height}
         src={imgSrc}
