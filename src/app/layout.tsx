@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import "../styles/main.scss";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Cairo } from "next/font/google";
 
@@ -24,6 +25,9 @@ export default function RootLayout({
       <body className={`overflow-x-hidden ${cairo.variable}`}>
         <Header />
         {children}
+        <Analytics
+          debug={process.env.NODE_ENV === "production" ? false : true}
+        />
       </body>
     </html>
   );
