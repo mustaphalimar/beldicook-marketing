@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import "../styles/main.scss";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Cairo } from "next/font/google";
 
